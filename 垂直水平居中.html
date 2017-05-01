@@ -3,42 +3,28 @@
 <head>
 <meta http-equiv="Content-Type" c />
 <title>3列布局</title>
-<style type="text/css">
-body {
-        font-family: Verdana, Arial;
-        margin: 0;
-        font-size: 12px;
-}
-#dyhead {
-        margin-bottom: 10px;
-}
-#dyleft {
-        float: left;
-        width: 200px;
-}
-#dycenter {
-        margin: 0 210px;
-}
-#dyright {
-       float: right;
-        width: 200px;
-}
-#dyfoot {
-        margin-top: 10px;
-        clear: both;
-}
-div {
-        background-color: #eee;
-        border: dotted 1px green;
-}
+<style>
+.wrapper {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-color: #ddd;
+     }
+    .content{
+        background-color:#6699FF;
+        width:200px;
+        height:200px;
+        position: absolute;        //父元素需要相对定位
+        top: 50%;
+        left: 50%;
+        margin-top:-100px ;   //二分之一的height，width
+        margin-left: -100px;
+    }
 </style>
 </head>
 <body>
-    <div id="dyhead">头部（3列布局，左右两栏宽度固定，中间栏自适应宽度）</div>
-    <div id="dyleft">左栏固定宽度为200px</div>
-    <div id="dyright">右栏固定宽度为200px</div>
-    <div id="dycenter">中间自适应宽度</div>
-    <!--注意这里，中间3列的div的顺序不是“左中右”，而“左右中”,中间一列写在最后-->
-    <div id="dyfoot">底部</div>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>    
 </body>
 </html>
