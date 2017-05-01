@@ -31,3 +31,19 @@ document.write() 可用于直接向 HTML 输出流写内容。简单的说就是
 document.write(mystr+"<br>");//输出hello后，输出一个换行符
   document.write("JavaScript");
 </script>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>document.write</title>
+  <script type="text/javascript">
+    var mystr="我是";
+    var mychar="JavaScript";
+document.write(mychar);
+document.write(mystr+mychar+'的忠实粉丝!');
+  </script>
+</head>
+<body>
+</body>
+</html>
