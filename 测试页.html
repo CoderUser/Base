@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" c />
+<title>3列布局</title>
+<style type="text/css">
+body {
+        font-family: Verdana, Arial;
+        margin: 0;
+        font-size: 12px;
+}
+#dyhead {
+        margin-bottom: 10px;
+}
+#dyleft {
+        float: left;
+        width: 200px;
+}
+#dycenter {
+        margin: 0 210px;
+}
+#dyright {
+       float: right;
+        width: 200px;
+}
+#dyfoot {
+        margin-top: 10px;
+        clear: both;
+}
+div {
+        background-color: #eee;
+        border: dotted 1px green;
+}
+</style>
+</head>
+<body>
+    <div id="dyhead">头部（3列布局，左右两栏宽度固定，中间栏自适应宽度）</div>
+    <div id="dyleft">左栏固定宽度为200px</div>
+    <div id="dyright">右栏固定宽度为200px</div>
+    <div id="dycenter">中间自适应宽度</div>
+    <!--注意这里，中间3列的div的顺序不是“左中右”，而“左右中”,中间一列写在最后-->
+    <div id="dyfoot">底部</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" c />
+<title>3列布局</title>
+<style type="text/css">
+body {
+        font-family: Verdana, Arial;
+        margin: 0;
+        padding:0;
+        font-size: 12px;
+}
+#container{/*添加外层容器，用来设置最小宽度*/
+        min-width:975px; /*For FF*/
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1000?"975px":"auto"); /*For IE6*/
+        border:1px solid #33CCFF;
+}
+#dyhead {
+        background-color: #eee;
+        border:1px dotted green;
+}
+#center:after{
+        content:".";
+        visibility:hidden;
+        display:block;
+        height:0;
+        clear:both;
+}
+#center{/*用以闭合内层3个浮动的层*/
+        clear:both;
+        width:100%;
+        margin:10px auto;
+        padding:10px 0;
+        border:1px solid #FF0000;
+}
+#dyleft {
+         float: left;
+         width: 200px;
+         border:1px solid #9900FF;
+}
+#dycenter {
+        min-width:56.3%;
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1000?"56.1%":"auto");
+        margin:0 210px 0 210px;
+        border:1px solid #0000CC;
+}
+#dyright {
+        float: right;
+        width: 200px;
+        border:1px solid #9900FF;
+}
+#dyfoot {
+        clear: both;
+        background-color: #eee;
+        border:1px dotted green;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="dyhead">头部（3列布局，左右两栏宽度固定，中间栏自适应宽度）</div>
+<div id="center">
+    <div id="dyleft">左栏固定宽度为200px</div>
+    <div id="dyright">右栏固定宽度为200px</div>
+    <div id="dycenter">中间自适应宽度<br/><img src="file:///E|/阿君/html/培训光盘网/images/changePIC01.gif" alt="" width="500" height="150" /><br/>亲眼见她“阴”过一个MM。那次我们要争取一个重要的客户，女人让MM做个产品的展示和推介计划。那天中午，女人特地请MM去吃大餐，席间，她一反常态，用琼瑶片女主角的温柔腔调甜言蜜语：“你很努力，我都看在眼里，你真是我的好帮手……</div>
+</div>
+<div id="dyfoot">底部</div>
+</div>
+</html>
