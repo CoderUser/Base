@@ -81,12 +81,12 @@ var data = [];
 	data[2]();//3
 5.下面代码中alert输出是什么？
 var name = 'global';
-	var obj = {
-		name : 'obj',
-		dose : function(){
-			this.name = 'dose';
-			return function(){
-				return this.name;
+var obj = {
+	name : 'obj',
+	dose : function(){
+		this.name = 'dose';
+		return function(){
+			return this.name;
 			}
 		}
 	}
