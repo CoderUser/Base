@@ -41,6 +41,41 @@ B. str.length的返回值是16
 C. str.indexOf("come",4)的返回值为4
 D. str.toUpperCase()的返回值是"Welcome To China"
 4.下面javascript代码中获取页面第一个div标签正确的是（D）
-A.
+A.document.getElementsByName("div")[0]
+B.document.querySelector("div")
+C.document.getElementsByTagName("div")[0]
+D.document.querySelectorAll("div")
 三、解答题
 1.写出下面代码中3次alert的结果
+	var x = "3"+4+"5"+6;
+	function bar() {
+		this.x = 6+5+4+"3";
+		return x;
+	}
+	var foo = new bar();
+	alert(foo.x);//153
+	alert(window.x);//3456
+	alert(bar.call(window,null));//153
+2.写出输出顺序
+(function(){
+		console.log(1);
+		setTimeout(function(){console.log(2)},1000);
+		setTimeout(function(){console.log(3)},0);
+		console.log(4);
+	})();
+//1  4  3  2
+3.下面这段代码运行后，window.animal的值是多少？
+
+(window.animal || (window.animal = 'cat'));
+//cat
+4.下面代码输出结果是什么？
+var data = [];
+	for (var k = 0; k < 3; k++) {
+		data[k] = function(){
+			console.log(k);
+
+		}
+	}
+	data[0]();//3
+	data[1]();//3
+	data[2]();//3
