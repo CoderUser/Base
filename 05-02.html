@@ -1,0 +1,120 @@
+1、px和em的区别
+px表示像素 (计算机屏幕上的一个点：1px = 1/96in)，是绝对单位 ，不会因为其他元素的尺寸变化而变化。
+em表示相对于父元素的字体大小。em是相对单位 ，没有一个固定的度量值，而是由其他元素尺寸来决定的相对值。
+　　px是绝对单位，不支持IE的缩放。
+　　em是相对单位，网页中的文字能放大和缩小。将行距(line-height)，和纵向高度的单位都用em。保证缩放时候的整体性。
+  　1. em的值并不是固定的;
+   2. em会继续父级元素的字体大小。
+
+2、常用哪几种浏览器测试？有哪些内核？
+
+Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]
+Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等
+Presto内核：Opera7及以上。 [Opera内核原为：Presto，现为：Blink;]
+Webkit内核：Safari,Chrome等。 [ Chrome的：Blink（WebKit的分支）]
+
+3、如何让页面禁止缓存？
+方法一：在<head>标签里增加如下meta标签。
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+
+4、HTML5应用程序缓存和浏览器缓存有什么区别？
+
+HTML5 的应用缓存最关键的就是支持离线应用，可获取少数或者全部网站内容，包括 HTML、CSS、图像和 JavaScript 脚本并存在本地。该特性加速了网站的性能，可通过如下方式实现：
+
+<!doctype html>
+<html manifest="example.appcache">
+.....
+</html>
+与传统的浏览器缓存比较，该特性并不强制要求用户访问网站。
+
+应用程序缓存是会预加载的，保证齐全地供应和保存。浏览器缓存没有这些控制，不能作为程序缓存使用。
+不幸地，应用程序缓存过於简单，导致效率不彰，预期将会被 Service Worker 取代。
+
+5、怎样添加、移除、移动、复制、创建和查找节点？
+
+（1）创建新节点
+ 
+      createDocumentFragment()    //创建一个DOM片段
+ 
+      createElement()   //创建一个具体的元素
+ 
+      createTextNode()   //创建一个文本节点
+ 
+（2）添加、移除、替换、插入
+ 
+      appendChild()
+ 
+      removeChild()
+ 
+      replaceChild()
+ 
+      insertBefore() //在已有的子节点前插入一个新的子节点
+ 
+（3）查找
+ 
+      getElementsByTagName()    //通过标签名称
+ 
+      getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)
+ 
+      getElementById()    //通过元素Id，唯一性
+
+6、<meta name=”viewport” content=”width=device-width, initial-scale=1, user-scalable=no″>如何解析这个标签？
+
+content属性值 :
+     width:可视区域的宽度，值可为数字或关键词device-width
+     height:同width
+     intial-scale:页面首次被显示是可视区域的缩放级别，取值1.0则页面按实际尺寸显示，无任何缩放
+     maximum-scale=1.0, minimum-scale=1.0;可视区域的缩放级别，
+              maximum-scale用户可将页面放大的程序，1.0将禁止用户放大到实际尺寸之上。
+     user-scalable:是否可对页面进行缩放，no 禁止缩放
+7、js的转向函数是？document.form["formName"].submit,解释你的理解。
+8、js能否定义二维数组，如果不能，如何解决？
+9、js手机验证的正则表达式。
+10、js  demo1.html和demo2.html在同一目录下，用JavaScript实现当打开demo1.html 10秒后，自动跳转到demo2.html
+11、列举几个jQuery常用的事件函数。
+
+
+.click()
+鼠标单击触发事件，参数可选（data，function）
+.dblclick()
+双击触发，同上
+.mousedown()/up()
+鼠标按下/弹起触发事件
+.mousemove()
+鼠标移动事件
+.mouseover()/out()
+鼠标移入/移出触发事件
+.mouseenter()/leave()
+鼠标进入/离开触发事件*
+.hover(func1,func2)
+鼠标移入调用func1函数，移出调用func2函数
+.focusin()
+鼠标聚焦到该元素时触发事件
+.focusout()
+鼠标失去焦点时触发事件
+. focus()/.blur()
+鼠标聚焦/失去焦点触发事件（不支持冒泡）
+.change()
+表单元素发生改变时触发事件
+.select()
+文本元素被选中时触发事件
+.submit()
+表单提交动作触发*
+.keydown()/up()
+键盘按键按下/弹起触发
+.on()
+多事件的绑定
+.off()
+移除事件的绑定
+.trigger(“event”)
+触发事件event调用
+.triggerHandler()
+触发事件，不会冒泡，不会触发默认事件
+
+12、写出一个ajax+json+post实例。
